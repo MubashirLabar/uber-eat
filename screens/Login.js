@@ -18,9 +18,9 @@ const LoginScreen = ({ navigation }) => {
     } else if (password === "") {
       Alert.alert("Login Error", "Password is required");
     } else {
-      navigation.navigate("home");
       console.log("username:", username);
       console.log("password:", password);
+      navigation.navigate("home");
     }
   };
 

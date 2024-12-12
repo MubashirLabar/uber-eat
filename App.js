@@ -2,13 +2,14 @@ import { View, StyleSheet } from "react-native";
 import { useFonts } from "expo-font";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-
 import LoginScreen from "./screens/Login";
 import HomeScreen from "./screens/Home";
 
 const Stack = createStackNavigator();
 
 const App = () => {
+  console.log("App Screen");
+
   const [loadedFont, error] = useFonts({
     Light: require("./assets/fonts/Inter_28pt-Light.ttf"),
     Regular: require("./assets/fonts/Inter_28pt-Regular.ttf"),
