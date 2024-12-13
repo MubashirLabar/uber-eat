@@ -8,7 +8,7 @@ import HomeScreen from "./screens/Home";
 const Stack = createStackNavigator();
 
 const App = () => {
-  console.log("App Screen");
+  console.log("New Console for testing");
 
   const [loadedFont, error] = useFonts({
     Light: require("./assets/fonts/Inter_28pt-Light.ttf"),
