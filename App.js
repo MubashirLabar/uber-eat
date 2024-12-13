@@ -8,7 +8,7 @@ import HomeScreen from "./screens/Home";
 const Stack = createStackNavigator();
 
 const App = () => {
-  console.log("New Console for testing");
+  console.log("App Screen");
 
   const [loadedFont, error] = useFonts({
     Light: require("./assets/fonts/Inter_28pt-Light.ttf"),
@@ -25,9 +25,23 @@ const App = () => {
   return (
     <View style={style.app}>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="login" component={LoginScreen} />
-          <Stack.Screen name="home" component={HomeScreen} />
+        <Stack.Navigator
+          screenOptions={
+            {
+              // headerShown: false,
+            }
+          }
+        >
+          <Stack.Screen
+            options={{ title: "Login", headerShown: false }}
+            name="login"
+            component={LoginScreen}
+          />
+          <Stack.Screen
+            options={{ title: "Home" }}
+            name="home"
+            component={HomeScreen}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </View>
