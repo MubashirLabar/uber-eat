@@ -31,14 +31,32 @@ const App = () => {
           <Tab.Screen
             name="login"
             component={LoginScreen}
-            // options={{
-            //   tabBarLabel: "Login",
-            //   tabBarIcon: () => <Icon name="home" color={color} size={size} />,
-            // }}
+            options={{
+              tabBarLabel: "Login",
+              tabBarIcon: () => <View></View>,
+            }}
           />
-          <Tab.Screen name="home" component={HomeScreen} />
-          <Tab.Screen name="products" component={HomeScreen} />
-          <Tab.Screen name="profile" component={HomeScreen} />
+          <Tab.Screen
+            name="home"
+            component={HomeScreen}
+            options={{
+              tabBarLabel: "Home",
+            }}
+          />
+          <Tab.Screen
+            name="products"
+            component={HomeScreen}
+            options={{
+              tabBarLabel: "Products",
+            }}
+          />
+          <Tab.Screen
+            name="profile"
+            component={HomeScreen}
+            options={{
+              tabBarLabel: "Profile",
+            }}
+          />
         </Tab.Navigator>
       </NavigationContainer>
     </View>
